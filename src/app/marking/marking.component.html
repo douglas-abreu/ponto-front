@@ -1,0 +1,22 @@
+<app-header-home></app-header-home>
+<div style="padding: 0 4rem 0 4rem;">
+    <div class="content">
+        <div class="marking">
+            <div class="report" *ngIf="report$ | async as report">
+                <ng-container *ngIf="report; else noData">
+                    <span class="report-data date">Dia: {{report.day | date: "dd/MM/yyyy"}}</span>
+                    <span class="report-data total-hours">Horas Totais: {{report.totalHours}}</span>
+                    <span class="report-data exceeded-hours">Horas Excedidas: {{report.exceededHours}}</span>
+                    <span class="report-data missing-hours">Horas Faltas: {{report.missingHours}}</span>
+                </ng-container>
+                <ng-template #noData>
+                    <span class="report-data missing-hours">Ponto não inicializado</span>
+                </ng-template>
+            </div>
+            <button (click)="createMarking()" class="btn">
+                <span>Marcar</span>
+            </button>
+        </div>
+    </div>
+</div>
+

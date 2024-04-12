@@ -1,0 +1,40 @@
+.content
+    display: grid
+    min-height: calc(100vh - 9.75rem)
+    max-width: 70rem
+    width: 100%
+    margin: 0 auto
+    justify-content: center
+    align-content: center
+    column-gap: 1.5rem
+    .marking
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        .report
+            display: flex
+            gap: 2rem
+            .report-data
+                padding: 2rem
+                font-size: 1rem
+                font-weight: 700
+                border-radius: 0.5rem
+                opacity: 0.5
+            .date
+                opacity: 1 !important
+                background-color: var(--anti-flash-white) 
+            .missing-hours
+                background-color: var(--red) 
+            .total-hours
+                background-color: var(--wageningen-green) 
+            .exceeded-hours
+                background-color: var(--yellow-beer) 
+        .btn
+            background-color: var(--wageningen-green)
+            opacity: 0.5
+            padding: 2rem 3rem 2rem 3rem
+            border-radius: 3rem
+            span
+                color: var(--black)
+                font-weight: 700
+                font-size: 1.2rem
